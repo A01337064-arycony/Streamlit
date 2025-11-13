@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px  # 👈 CAMBIADO: antes era "as impx"
+import plotly.express as px  #  CAMBIADO: antes era "as impx"
 
 # -----------------------------
 # Configuración base de la app

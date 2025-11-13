@@ -1,7 +1,6 @@
-
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+import plotly.express as px  # 👈 CAMBIADO: antes era "as impx"
 
 # -----------------------------
 # Configuración base de la app
@@ -259,7 +258,8 @@ with st.container():
         ck1, ck2, ck3 = st.columns(3)
         ck1.metric("Unidades (vendedor)", f"{int(d['UNIDADES VENDIDAS'].sum()):,}".replace(",", " "))
         ck2.metric("Ventas (vendedor)", fmt_money(d["VENTAS TOTALES"].sum()))
-        ck3.metric("% Ventas Prom (vendedor)", f"{float(d['PORCENTAJE DE VENTAS'].mean()):.2f}%")
+        ck3.metric("% Ventas Prom (vendedor)",f"{float(d['PORCENTAJE DE VENTAS'].mean()):.2f}%"
+)
 
         # Gráficas por región para ese vendedor
         g1, g2 = st.columns(2)
